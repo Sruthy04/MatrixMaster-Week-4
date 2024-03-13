@@ -1,16 +1,18 @@
 $(document).ready(function () {
+    var originalData;
+
     $.ajax({
         url: 'https://countriesnow.space/api/v0.1/countries/flag/images',
         type: 'GET',
         success: function (response) {
-            var originalData = response.data;
+            originalData = response.data;
             displayCards(originalData);
         },
         error: function (xhr, status, error) {
             console.error('Error:', error);
         }
     });
-    
+
     $('#searchButton').on('click', function () {
         var searchValue = $('#searchInput').val().toLowerCase();
         if (searchValue === '') {
@@ -21,8 +23,11 @@ $(document).ready(function () {
             });
             displayCards(filteredData);
             $('#country-cards').show();
-            
         }
+    });
+
+      $('#showAllButton').on('click', function () {
+        displayCards(originalData);
     });
 
     function displayCards(data) {
