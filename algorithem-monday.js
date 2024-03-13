@@ -14,16 +14,16 @@ function GameOf3s(number) {
      if (number % 3 == 0){
         console.log(number,0);
         number/=3;
-     }else if (number % 3 == 1){
+    }else if (number % 3 == 1){
         console.log(number,-1);
         number-=1;
         number/=3;
         
-     }else{
+    }else{
         console.log(number,+1)
         number+=1
         number/= 3  
-     }
+    }
     } 
     return number;
 }

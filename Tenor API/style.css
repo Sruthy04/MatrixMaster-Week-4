@@ -1,0 +1,41 @@
+.card {
+    max-width: 300px;
+    border: 2px solid #ccc;
+    height: 350px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px blue;
+}
+
+.card-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-group .form-control {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.input-group .btn {
+    margin-right: 10px;
+}
+#country-cards {
+    color: rgb(37, 28, 28);
+    font-weight: bold;
+}
